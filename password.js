@@ -8,14 +8,31 @@
 
 // Test out your conditional by changing the value of your password variable and running your file!
 
-let passward ='199r5'
-console.log(`${passward} ${passward.length}`);
-if (passward.length >=10) {
-console.log('Long enough')
-} else {
-  console.log('too short')
+let password ='Abcdefg123'
+let numCheck = false
+let letterCheck = false
+let upperCheck = false
+
+
+for (let i = 0; i < password.length; i++){
+  if(!isNaN(+password[i])){
 }
-let getCharacterLength= (passward) 
-  return [passward].length;{
-  console.log(getCharacterLength);
+
+if (password[i] === password[i].toUpperCase() && isNaN(+ password[i])){
+  upperCheck =true
 }
+}
+
+
+
+
+// console.log(`${passward} ${passward.length}`);
+// if (passward.length >=10) {
+// console.log('Long enough')
+// } else {
+//   console.log('too short')
+// }
+// let getCharacterLength= (passward) 
+//   return [passward].length;{
+//   console.log(getCharacterLength);
+// }
