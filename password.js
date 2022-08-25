@@ -12,27 +12,29 @@ let password ='Abcdefg123'
 let numCheck = false
 let letterCheck = false
 let upperCheck = false
+let lengthCheck = false
 
 
 for (let i = 0; i < password.length; i++){
   if(!isNaN(+password[i])){
+    numCheck = true
 }
 
-if (password[i] === password[i].toUpperCase() && isNaN(+ password[i])){
-  upperCheck =true
+if (password[i] === password[i].toUpperCase() && isNaN(+password[i])){
+  upperCheck = true
 }
 }
 
+if (password.length >=10 && password.length <= 20){
+  lengthCheck = true
+}
 
+if(/[a-zA-Z].test(password)/){
+  letterCheck = true
+}
 
-
-// console.log(`${passward} ${passward.length}`);
-// if (passward.length >=10) {
-// console.log('Long enough')
-// } else {
-//   console.log('too short')
-// }
-// let getCharacterLength= (passward) 
-//   return [passward].length;{
-//   console.log(getCharacterLength);
-// }
+if(lengthCheck && numCheck && upperCheck && letterCheck){
+  console.log('Meets Requirements')
+} else { 
+  console.log('Doesnt Meet')
+}
